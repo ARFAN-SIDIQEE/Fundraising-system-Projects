@@ -1,0 +1,39 @@
+/* global.css — minimal overrides, Bootstrap handles the rest */
+:root {
+  --bs-success: #1a6b4a;
+  --bs-success-rgb: 26,107,74;
+  --brand: #1a6b4a;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+/* Smooth transitions */
+.btn, .nav-link, .card { transition: all 0.2s ease; }
+
+/* Sidebar active state */
+.sidebar-btn-active {
+  background: rgba(255,255,255,0.18) !important;
+  border-left: 3px solid white !important;
+  color: white !important;
+  font-weight: 600 !important;
+}
+
+/* Spinner override */
+.spinner-border-sm { width: 1rem; height: 1rem; }
+
+/* Responsive sidebar fix on mobile */
+@media (max-width: 768px) {
+  .dashboard-sidebar {
+    width: 200px !important;
+  }
+  .dashboard-main {
+    margin-left: 200px !important;
+    padding: 16px !important;
+  }
+}
+@media (max-width: 576px) {
+  .dashboard-sidebar { display: none !important; }
+  .dashboard-main { margin-left: 0 !important; }
+}
